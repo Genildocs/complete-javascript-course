@@ -11,3 +11,9 @@ console.log(primeiroNome); */
 let continent = "South America";
 let population = "215 millions people"
 console.log(`Country: ${country}, continent: ${continent}, population: ${population}.`); */
+
+let years;
+console.log(years);
+years = 2023;
+console.log(years);
+
