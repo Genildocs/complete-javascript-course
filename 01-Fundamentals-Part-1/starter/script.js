@@ -111,12 +111,10 @@ if(qualSeuNome === 'Genildo'){
 };
  */
 
-let age = 40;
 
-if(age !== 20 && !age < 30){
-     console.log('Minha operação é verdadeira')
-}else{
-     console.log('Minha operação é falsa')
-}
+/* const hasDriversLicense = true;
+const hasGoodVision = true;
+const newDecision = true;
 
-console.log(false < 30)
+console.log(hasDriversLicense && hasGoodVision && newDecision); */
+

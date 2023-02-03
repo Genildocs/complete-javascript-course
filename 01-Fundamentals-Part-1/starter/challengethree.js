@@ -9,3 +9,61 @@ Dados de teste:
 § Dados 1: Dolphins marcam 96, 108 e 89. Koalas marcam 88, 91 e 110
 § Dados Bônus 1: Dolphins marcam 97, 112 e 101. Koalas marcam 109, 95 e 123
 § Dados Bônus 2: Dolphins marcam 97, 112 e 101. Koalas marcam 109, 95 e 106 */
+
+
+let averageScoreDophins =(96 + 108 + 89) / 3;
+console.log(`Score Dophins: ${averageScoreDophins.toFixed(2)}`);
+
+let averageScoreKoalas = (88 + 91 + 110) / 3;
+console.log(`Score Koalas: ${averageScoreKoalas.toFixed(2)}`);
+
+if (averageScoreDophins > averageScoreKoalas) {
+    console.log('Winner is Dophins!');
+}else if (averageScoreDophins === averageScoreKoalas) {
+    console.log('Draw of the two teams!');
+}else{
+    console.log('Winner is Koalas!');
+}
+
+/* Bonus 1 */
+console.log(`
+Bonus 1:`)
+averageScoreDophins = (97 + 112 + 101) / 3;
+console.log(`Score Dophins: ${averageScoreDophins.toFixed(2)}`);
+
+averageScoreKoalas = (109 + 95 + 123) / 3;
+console.log(`Score Koalas: ${averageScoreKoalas.toFixed(2)}`);
+
+let minimumScoreToWin = 100;
+
+if (averageScoreDophins >= minimumScoreToWin && averageScoreDophins > averageScoreKoalas){
+    console.log('Dophins winners !')
+} else if (averageScoreKoalas >= minimumScoreToWin && averageScoreKoalas > averageScoreDophins){
+    console.log('Koalas winners!');
+} else if (averageScoreKoalas >= minimumScoreToWin && averageScoreKoalas === averageScoreDophins){
+    console.log('Draw!');
+}else {
+    console.log(`No winner. Minimum score: ${minimumScoreToWin} not reached.`);
+}
+
+/* Bonus 2 */
+console.log(`
+Bonus 2:`)
+
+averageScoreDophins = (97 + 112 + 101) / 3;
+console.log(`Score Dophins: ${averageScoreDophins.toFixed(2)}`);
+
+averageScoreKoalas = (109 + 95 + 106) / 3;
+console.log(`Score Koalas: ${averageScoreKoalas.toFixed(2)}`);
+
+minimumScoreToWin = 100;
+
+if (averageScoreDophins >= minimumScoreToWin && averageScoreDophins > averageScoreKoalas){
+    console.log('Dophins winners !')
+} else if (averageScoreKoalas >= minimumScoreToWin && averageScoreKoalas > averageScoreDophins){
+    console.log('Koalas winners!');
+} else if (averageScoreKoalas >= minimumScoreToWin && averageScoreKoalas === averageScoreDophins){
+    console.log('Draw!');
+} else {
+    console.log(`No winner. Minimum score: ${minimumScoreToWin} not reached.`);
+}
