@@ -118,3 +118,9 @@ const newDecision = true;
 
 console.log(hasDriversLicense && hasGoodVision && newDecision); */
 
+/* Operador Ternario */
+// let numberOne = -1;
+
+// let number = numberOne > 0 ?'É SIM!' : 'É NÃO!';
+// console.log(number)
+
