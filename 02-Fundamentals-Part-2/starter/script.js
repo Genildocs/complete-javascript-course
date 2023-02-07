@@ -80,7 +80,7 @@ logger(); */
 
 
 
-const processadorDeFrutas = function(apples, oranges){
+/* const processadorDeFrutas = function(apples, oranges){
      const applesPieces = cortadorDeFrutas(apples);
      const orangesPieces = cortadorDeFrutas(oranges);
 
@@ -110,5 +110,23 @@ const soma = function(number1, number2){
 const result = calc(soma,10 , 5)
 console.log(`A Soma é: ${result}`)
 
-logger()
+logger() */
 
+// Estruturas de dados Array
+
+const amigos = ['Rafaela', 'Mateus', 'Gabriel'];
+console.log(amigos);
+logger()
+console.log(`Posição 0 do array: ${amigos[0]}`);
+console.log(`Posição 1 do array: ${amigos[1]}`);
+console.log(`Posição 2 do array: ${amigos[2]}`);
+logger()
+console.log(`Meu array tems ${amigos.length} elements.`)
+console.log(`O elemento na ultima posição do meu array é ${amigos[amigos.length - 1]}.`);
+console.log(`Irei alterar o ${amigos[1]} por ${amigos[1]='Marcos'}. Desse jeito que altera o array.`)
+logger()
+const primeiroNome = 'Genildo';
+const GENILDO = [primeiroNome, 'Cerqueira', 2023-1992, amigos]
+console.log(`Olha o poder do array:
+Meu nome é: ${GENILDO[0]}, tenho o sobrenome: ${GENILDO[1]}, ${GENILDO[2]} anos de idades e tenho 
+os amigos: ${GENILDO[GENILDO.length -1]}.`)

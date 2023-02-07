@@ -3,7 +3,6 @@
 let score = (score1,score2,score3)=> (score1 + score2 + score3) / 3;
 
 let averageScoreDophins = score(96,108,89);
-
 let averageScoreKoalas = score(88,91,110);
 
 function winner(time1, time2){
@@ -20,14 +19,12 @@ winner(averageScoreDophins,averageScoreKoalas);
 
 console.log('----------')
 averageScoreDophins = score(97,112,101);
-
 averageScoreKoalas = score(109,95,123);
 
 winner(averageScoreDophins,averageScoreKoalas);
 
 console.log('----------')
-averageScoreDophins = score(97,112,101);
-
+averageScoreDophins = score(110,112,101);
 averageScoreKoalas = score(109,95,106);
 
 winner(averageScoreDophins,averageScoreKoalas);
