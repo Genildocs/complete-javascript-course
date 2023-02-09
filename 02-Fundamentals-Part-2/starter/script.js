@@ -114,8 +114,8 @@ logger() */
 
 // Estruturas de dados Array
 
-const amigos = ['Rafaela', 'Mateus', 'Gabriel'];
-console.log(amigos);
+// const amigos = ['Rafaela', 'Mateus', 'Gabriel'];
+/* console.log(amigos);
 logger()
 console.log(`Posição 0 do array: ${amigos[0]}`);
 console.log(`Posição 1 do array: ${amigos[1]}`);
@@ -129,4 +129,28 @@ const primeiroNome = 'Genildo';
 const GENILDO = [primeiroNome, 'Cerqueira', 2023-1992, amigos]
 console.log(`Olha o poder do array:
 Meu nome é: ${GENILDO[0]}, tenho o sobrenome: ${GENILDO[1]}, ${GENILDO[2]} anos de idades e tenho 
-os amigos: ${GENILDO[GENILDO.length -1]}.`)
+os amigos: ${GENILDO[GENILDO.length -1]}.`) */
+
+// amigos.push(2023);
+// console.log(amigos);
+// let newAmigos = amigos.push('HOje é dia de programar');
+// console.log(amigos);
+// console.log(newAmigos); // metodo push retorna o comprimento do array
+// amigos.pop();
+// console.log(amigos);
+// console.log(amigos.indexOf('Rafaela'));
+// console.log(amigos);
+// console.log(amigos.includes(2023));
+
+const genildo = {
+     name : 'Genildo',
+     idade : 2023 - 1992,
+     amigos : ['Rafaela', 'Mateus', 'Gabriel']
+}
+
+
+console.log(`${genildo.name} has ${genildo.amigos.length} friends, and his best
+friend is called ${genildo.amigos[0]}.`)
+
+genildo.city = 'Rio das ostras';
+console.log(genildo)

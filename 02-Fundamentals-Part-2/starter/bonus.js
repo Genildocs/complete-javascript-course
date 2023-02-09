@@ -29,4 +29,3 @@ averageScoreKoalas = score(109,95,106);
 
 winner(averageScoreDophins,averageScoreKoalas);
 
-
