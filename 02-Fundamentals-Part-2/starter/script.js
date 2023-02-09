@@ -144,13 +144,22 @@ os amigos: ${GENILDO[GENILDO.length -1]}.`) */
 
 const genildo = {
      name : 'Genildo',
-     idade : 2023 - 1992,
-     amigos : ['Rafaela', 'Mateus', 'Gabriel']
+     nascimento : 1992,
+     amigos : ['Rafaela', 'Mateus', 'Gabriel'],
+     license : true,
+     trabalho : 'Analista',
+     calcIdade: function (){
+          this.age = 2023 - this.nascimento
+          return this.age
+     }
 }
 
 
-console.log(`${genildo.name} has ${genildo.amigos.length} friends, and his best
-friend is called ${genildo.amigos[0]}.`)
+// console.log(`${genildo.name} has ${genildo.amigos.length} friends, and his best
+// friend is called ${genildo.amigos[0]}.`)
 
-genildo.city = 'Rio das ostras';
+// genildo.city = 'Rio das ostras';
+// console.log(genildo)
+
+genildo.calcIdade()
 console.log(genildo)
