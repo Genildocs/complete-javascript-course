@@ -8,7 +8,6 @@ for (let i = 0; i < contas.length; i++){
 }
 
 
-
 let valorTotalDaConta = (contas, gorjeta)=> contas + gorjeta;
 
 
@@ -31,5 +30,18 @@ function calcAverage(arr){
 }
 
 console.log(`
-Média dos numeros contidos no array: ${calcAverage(contas)}
+Média dos numeros contidos no array: ${calcAverage(total)}
 `)
+
+// O PROFESSOR FEZ ASSIM
+
+let tips = []; // gorjetas
+let totals = []; //total da conta
+
+for (let i = 0; i < contas.length; i++){
+    let tip = totalGorjeta(contas[i]);
+    tips.push(tip); // totals de gorjetas
+    totals.push(tip + contas[i]); // total da conta
+}
+
+// a função ficou igual a que eu fiz.
