@@ -14,3 +14,4 @@ while (dados !== 6){
     dados = Math.trunc(Math.random() * 6) + 1
     if(dados === 6) console.log('Saiu 6, loop while encerrado')
 }
+
