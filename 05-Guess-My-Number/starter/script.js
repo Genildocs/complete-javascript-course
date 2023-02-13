@@ -12,7 +12,7 @@ console.log(document.querySelector('.guess').value); */
 let numberSecret = Math.trunc(Math.random() * 20) + 1; // Gerando aleatoriamente um numero de 1 a 20
 
 let score = 20; // Variavel com o numero de chances que o usuario tem para jogar
-let highscore = 5;
+let highscore = 0;
 const input = document.querySelector('input');
 
 document.querySelector('.check').addEventListener('click', function () {
