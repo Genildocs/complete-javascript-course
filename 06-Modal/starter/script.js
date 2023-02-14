@@ -13,6 +13,7 @@ const OpenModal = function () {
 const closeModal = function () {
   modal.classList.add('hidden'); // Quando o botão for clicado a classe será adicionada novamente.
   overlay.classList.add('hidden');
+  
 };
 
 for (let i = 0; i < btnsOpenModal.length; i++) {
@@ -21,3 +22,11 @@ for (let i = 0; i < btnsOpenModal.length; i++) {
 
 btnCloseModal.addEventListener('click', closeModal);
 overlay.addEventListener('click', closeModal)
+
+document.addEventListener('keydown', function(event){
+     if(event.key === 'Escape' && !modal.classList.contains('hiden')){
+          closeModal();
+     }
+}) /* Esse evento é disparado quando é pressionado uma tecla do teclado. Colocamos esse evento no document
+pois ele será ativado em todo o corpo do documento HTML */
+
