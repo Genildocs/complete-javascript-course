@@ -18,7 +18,7 @@ for (let i = 0; i < newFlights.length; i ++){
     /*arrayFlights.push(newFlights[i].replaceAll(newFlights[i][0],'').replaceAll(';',' '))*/
     const[fours, secon, terc, quart] = newFlights[i].replace('_','').split(';');
     const arrafligts = [fours.replace('_',' ').padStart(25,'.'),'from',formtSlice(secon),'to', formtSlice(terc), `(${quart})`];
-    /*console.log(arrafligts.join(' '));*/
+    console.log(arrafligts.join(' '));
 }
 
 
@@ -41,3 +41,9 @@ for (let i =0; i < strignumber.length; i+= 4){
 }
 
 console.log(novoarray.join(' '))
+
+const listaCompras = ['maça','laranja','arroz','bananas'];
+listaCompras.unshift('oi')
+for (const item of listaCompras){
+    console.log(item)
+}

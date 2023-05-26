@@ -27,3 +27,19 @@ const restaurant = {
     },
   },
 };
+
+/*console.log(restaurant)
+
+const arr = [2,3,4];
+const a = arr[0];
+const b = arr[1];
+const c = arr[2];
+console.log(arr,a,b,c)
+const arr2 = [2,3,4];
+const [d,e,f] = arr2;
+console.log(arr2, d,e,f)*/
+
+console.log(restaurant.categories)
+let [main, secondary] = restaurant.categories;
+[main,secondary] = [secondary, main]
+console.log(main,secondary)
