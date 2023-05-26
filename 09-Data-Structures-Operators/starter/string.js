@@ -13,12 +13,12 @@ const flights =
 
 const newFlights = flights.split('+');
 
-
+const formtSlice = str => str.toUpperCase().slice(0,3);
 for (let i = 0; i < newFlights.length; i ++){
     /*arrayFlights.push(newFlights[i].replaceAll(newFlights[i][0],'').replaceAll(';',' '))*/
-    const[fours, secon, terc, quart] = newFlights[i].replace('_','').split(';')
-    const arrafligts = [fours.replace('_',' ').padStart(25,'.'),'from',secon.toUpperCase().slice(0,3),'to', terc.toUpperCase().slice(0,3), quart]
-    console.log(arrafligts.join(' '))
+    const[fours, secon, terc, quart] = newFlights[i].replace('_','').split(';');
+    const arrafligts = [fours.replace('_',' ').padStart(25,'.'),'from',formtSlice(secon),'to', formtSlice(terc), `(${quart})`];
+    /*console.log(arrafligts.join(' '));*/
 }
 
 
@@ -29,6 +29,15 @@ for (let i = 0; i < newFlights.length; i ++){
     const novoarray = [frist, 'from', second.toUpperCase().slice(0,3), 'to', terce.toUpperCase().slice(0,3), hours]
 }*/
 
-for (const flight of flights.split('+')){
-
+const strignumber = '5253201210928336';
+/*const novoarray = new Array(strignumber.slice(0,4))
+novoarray.push(strignumber.slice(4,8))
+novoarray.push(strignumber.slice(8,12))
+novoarray.push(strignumber.slice(12,16))
+console.log(novoarray.join(' '))*/
+const novoarray = [];
+for (let i =0; i < strignumber.length; i+= 4){
+    novoarray.push(strignumber.slice(i, i + 4))
 }
+
+console.log(novoarray.join(' '))
