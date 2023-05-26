@@ -43,3 +43,19 @@ console.log(restaurant.categories)
 let [main, secondary] = restaurant.categories;
 [main,secondary] = [secondary, main]
 console.log(main,secondary)
+
+const pessoa = {
+  nome : 'Genildo',
+  sobrenome : 'Cerqueira',
+  idade : 31
+}
+
+console.log(pessoa.nome)
+const {cor=[],nome,sobrenome} = pessoa;
+console.log(cor,nome,sobrenome)
+
+
+const arraydata = ['03', '04']
+const [mes, ano] = arraydata;
+const data = [`${mes}`, '/', `${ano}`].join('');
+console.log(data)
