@@ -67,8 +67,11 @@ console.log(data)*/
 
 /*The spread operator(...)*/
 const listaCompras = ['açucar', 'ovo', 'farinha', 'creme dental', 'feijão'];
-console.log(listaCompras)
 
+
+for(const items of listaCompras){
+  console.log(items)
+}
 
 
 /**************************/
