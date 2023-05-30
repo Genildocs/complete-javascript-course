@@ -67,11 +67,36 @@ console.log(data)*/
 
 /*The spread operator(...)*/
 const listaCompras = ['açucar', 'ovo', 'farinha', 'creme dental', 'feijão'];
+console.log(listaCompras);
+/*Copia de array com o operador spread*/
+const novoArray = [...listaCompras];
+console.log(novoArray);
+/*Juntando dois arrays*/
+const listaComprasDois = ['pasta de amendoin','nutella'];
+const compras = [...listaCompras, ...listaComprasDois];
+console.log(compras);
 
+/*Iterables: arrays, strings, maps, sets, nodlist*/
+const str = 'Genildo';
+const letras = [...str, ' ', 'Souza'];
+console.log(letras, ...letras)
 
-for(const items of listaCompras){
-  console.log(items)
+/*Varios argumentos para uma função*/
+const listaPlanos = ['Plano +', 'Plano ++', 'Plano star'];
+
+const planos = function (plan1, plan2, plan3){
+    console.log(`Os planos disponiveis são ${plan1}, ${plan2}, ${plan3}.`)
+}
+planos(listaPlanos[0],listaPlanos[1],listaPlanos[2])
+planos(...listaPlanos)
+
+/**/
+const add = function (...names){
+    for (const items of names){
+        console.log(items)
+    }
 }
 
-
+add('Marcos', 'Maria')
+add('s','q','a','d')
 /**************************/
