@@ -67,25 +67,25 @@ console.log(data)*/
 
 /*The spread operator(...)*/
 const listaCompras = ['açucar', 'ovo', 'farinha', 'creme dental', 'feijão'];
-console.log(listaCompras);
+/*console.log(listaCompras);*/
 /*Copia de array com o operador spread*/
 const novoArray = [...listaCompras];
-console.log(novoArray);
+/*console.log(novoArray);*/
 /*Juntando dois arrays*/
 const listaComprasDois = ['pasta de amendoin','nutella'];
 const compras = [...listaCompras, ...listaComprasDois];
-console.log(compras);
+/*console.log(compras);*/
 
 /*Iterables: arrays, strings, maps, sets, nodlist*/
 const str = 'Genildo';
 const letras = [...str, ' ', 'Souza'];
-console.log(letras, ...letras)
+/*console.log(letras, ...letras)*/
 
 /*Varios argumentos para uma função*/
 const listaPlanos = ['Plano +', 'Plano ++', 'Plano star'];
 
 const planos = function (plan1, plan2, plan3){
-    console.log(`Os planos disponiveis são ${plan1}, ${plan2}, ${plan3}.`)
+    /*console.log(`Os planos disponiveis são ${plan1}, ${plan2}, ${plan3}.`)*/
 }
 planos(listaPlanos[0],listaPlanos[1],listaPlanos[2])
 planos(...listaPlanos)
@@ -93,10 +93,41 @@ planos(...listaPlanos)
 /**/
 const add = function (...names){
     for (const items of names){
-        console.log(items)
+        // console.log(items)
     }
 }
 
 add('Marcos', 'Maria')
 add('s','q','a','d')
 /**************************/
+/*console.log(3 || 'not')
+console.log(true || 0)*/
+
+const restaurant = {
+    pizzas: ['Mussarela', 'Calabresa', 'Palmito'],
+    bebidas : 0,
+    doces : ['paçoca', 'halls', 'bala 7belo']
+}
+
+// Nullish : null and undefined
+restaurant.reserva = 0;
+const reservas = restaurant.reserva ?? 10;
+if (!0 ?? 10){
+    /*console.log('S')*/
+}
+
+/*Logical assignment operatos*/
+const rest1 = {
+    name: 'La mama',
+    lugaresDisponiveis: 10,
+}
+
+const rest2 = {
+    name: 'Mama mia',
+    dono: 'Santiago',
+}
+
+rest1.lugaresDisponiveis  ||= 10;
+rest2.lugaresDisponiveis = rest2.lugaresDisponiveis || 10;
+console.log(rest1);
+console.log(rest2);
