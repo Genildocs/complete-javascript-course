@@ -61,16 +61,72 @@ const inputLoanAmount = document.querySelector('.form__input--loan-amount');
 const inputCloseUsername = document.querySelector('.form__input--user');
 const inputClosePin = document.querySelector('.form__input--pin');
 
+const displayMoviments = function(moviments){
+  containerMovements.innerHTML = '';
+
+  moviments.forEach((mov, i)=>{    
+    const type = mov > 0 ? "deposit" : "withdrawal";
+
+    const html = `
+    <div class="movements__row">
+      <div class="movements__type movements__type--${type}">${i + 1} ${type}</div>
+      
+      <div class="movements__value">${mov}€</div>
+    </div>
+    `
+    containerMovements.insertAdjacentHTML("afterbegin", html)
+  });
+
+};
+
+displayMoviments(account1.movements)
+
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // LECTURES
 
-const currencies = new Map([
+
+
+/* const movements = [200, 450, -400, 3000, -650, -130, 70, 1300]; */
+
+/////////////////////////////////////////////////
+/* let arr = ['a','b','c','d','e'];
+console.log(arr.slice(2,3)) // Retorna um novo array sem a parte que foi fatiada. Ele nao conta pelo indicie
+console.log(arr.slice(-1))
+
+// Splice
+// Esse remove pelo indicie do elemento e altera o array original
+let arr2 = ['I', 'Love', 'Javascript']
+arr2.splice(-1)
+console.log(arr2)
+
+//Reverse
+console.log(arr.reverse())
+
+//Concat
+console.log(arr.concat(arr2))
+ */
+//For Each
+
+/* const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+let sum = 0;
+movements.forEach((item, index)=>{  
+  if(item > 0){  
+    sum += item
+    console.log(`${index}-> Você depositou: ${item} e tem o total de: ${sum}`)
+  }else{
+    console.log(`${index}-> Retirado da conta: ${item}`)
+  }
+
+}) */
+
+/* const currencies = new Map([
   ['USD', 'United States dollar'],
   ['EUR', 'Euro'],
   ['GBP', 'Pound sterling'],
 ]);
 
-const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+currencies.forEach((value, key)=>{
+   console.log(`Coin: ${key} -> name: ${value}`)
+}) */
 
-/////////////////////////////////////////////////
