@@ -81,6 +81,10 @@ const displayMoviments = function(moviments){
 
 displayMoviments(account1.movements)
 
+
+
+const user = 'Steven Thomas Williams';
+console.log(user.toLowerCase())
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // LECTURES
@@ -130,3 +134,8 @@ currencies.forEach((value, key)=>{
    console.log(`Coin: ${key} -> name: ${value}`)
 }) */
 
+/* const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+const dolar = 1.1
+const newValue = movements.map( value => value * dolar)
+console.log(newValue)
+ */
