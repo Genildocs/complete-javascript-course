@@ -33,7 +33,14 @@ const account4 = {
   pin: 4444,
 };
 
-const accounts = [account1, account2, account3, account4];
+const account5 = {
+  owner: 'Genildo Cerqueira Souza',
+  movements: [50, 350, 1700, 1150, 19090],
+  interestRate: 3,
+  pin: 5555,
+};
+
+const accounts = [account1, account2, account3, account4,account5];
 
 // Elements
 const labelWelcome = document.querySelector('.welcome');
@@ -79,12 +86,28 @@ const displayMoviments = function(moviments){
 
 };
 
-displayMoviments(account1.movements)
+displayMoviments(account5.movements)
+
+const calcDisplayBalance = function(movements){
+  const balance = movements.reduce((acc, mov)=> acc + mov , 0)
+  labelBalance.textContent = `R$ ${balance}`
+}
+calcDisplayBalance(account5.movements)
+
+const createUserNames = function(accs){  
+  accs.forEach((acc)=>{
+      acc.username = acc.owner
+      .toLowerCase()
+      .split(' ')
+      .map(word=> word[0])
+      .join('');
+  });
+  
+};
+createUserNames(accounts)
 
 
 
-const user = 'Steven Thomas Williams';
-console.log(user.toLowerCase())
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // LECTURES
@@ -139,3 +162,14 @@ const dolar = 1.1
 const newValue = movements.map( value => value * dolar)
 console.log(newValue)
  */
+
+
+//Reduce
+
+// const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+
+// const balance = movements.reduce((acc, value)=>{
+//    return acc += value
+// }, 0)
+
+// console.log(balance)
